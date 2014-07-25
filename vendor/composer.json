@@ -1,0 +1,19 @@
+"repositories": [
+    {
+        "type": "package",
+        "package": {
+            "name": "gtrevino/angularjs",
+            "version": "dev-master",
+            "source": {
+                "url": "https://github.com/gtrevino/angularjs.git",
+                "type": "git",
+                "reference": "master"
+            },
+            "autoload": {
+                "psr-0" : {
+                    "gtrevino\\angularjs" : "src"
+                }
+            }
+        }
+    }
+],
