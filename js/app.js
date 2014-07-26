@@ -1,12 +1,17 @@
-var app = angular.module('app',['ngRoute']);
+var app = angular.module('app',['ngRoute','ngAnimate']);
 
-app.config(['$routeProvider', function($routeProvider){
-	$routeProvider.
-        when('/page1',{
-            templateUrl:'views/page1.html',
-            controller:'controllers/controller1'
-        }).
-        otherwise({
-		redirectTo:'/'
-	});
-}]);
+app.config(function($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: 'js/views/page-home.html',
+            controller: 'mainController'
+        })
+        .when('/about', {
+            templateUrl: 'js/views/page-about.html',
+            controller: 'aboutController'
+        })
+        .when('/contact', {
+            templateUrl: 'js/views/page-contract.html',
+            controller: 'contactController'
+        });
+});
